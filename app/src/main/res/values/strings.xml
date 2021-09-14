@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PokemonKotlin</string>
+
+    <string name="region_kanto">Kanto</string>
+    <string name="region_johto">Johto</string>
+    <string name="region_hoenn">Hoenn</string>
+    <string name="region_sinnoh">Sinnoh</string>
+    <string name="region_teselia">Teselia/Unova</string>
+    <string name="region_kalos">Kalos</string>
+    <string name="region_alola">Alola</string>
+    <string name="region_galar">Galar</string>
+    <string name="line"> <strike> crossed </strike> </string>
+    <string name="error_al_descargar_la_informaci_n">Error al descargar la información</string>
+
+</resources>
