@@ -21,6 +21,13 @@ object RetrofitBuilder {
             .build()
     }
 
+    private fun getRetrofitDetailV2(): Retrofit{
+        return  Retrofit.Builder()
+            .baseUrl(Constants.URL_POKEMON_DETAIL_V2)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
     private val client = OkHttpClient.Builder()
         .addInterceptor(HeaderInterceptor()).build()
 
@@ -37,6 +44,7 @@ object RetrofitBuilder {
 
     val apiService: ApiService = getRetrofit().create(ApiService::class.java)
     val apiServiceDeatail:ApiService =  getRetrofitDetail().create(ApiService::class.java)
+    val apiServiceDeatailV2:ApiService =  getRetrofitDetailV2().create(ApiService::class.java)
     val apiServiceLogin:ApiService =  getRetrofitLogin().create(ApiService::class.java)
 
 

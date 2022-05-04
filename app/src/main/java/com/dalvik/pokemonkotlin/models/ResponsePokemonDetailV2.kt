@@ -2,26 +2,30 @@ package com.dalvik.pokemonkotlin.models
 
 import com.google.gson.annotations.SerializedName
 
-data class ResponsePokemonDetail(
+data class ResponsePokemonDetailV2(
 
-    @SerializedName("id")
+    @SerializedName("number")
     val id: Int,
 
     @SerializedName("description")
     val description: String,
 
     @SerializedName("name")
-    val name: Name,
+    val name: String,
 
-    @SerializedName("type")
+    @SerializedName("species")
+    val specie: String,
+
+    @SerializedName("height")
+    val height: String,
+
+    @SerializedName("weight")
+    val weight: String,
+
+    @SerializedName("types")
     val type: List<String>,
 
-    @SerializedName("base")
-    val stats: Stats,
-
-    @SerializedName("profile")
-    val profile: Profile
-) {
+    ) {
 
     fun formatNumber(): String {
         return id.toString()

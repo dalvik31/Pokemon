@@ -12,6 +12,10 @@ interface ApiService {
     @GET("pokemon/{pokemon}")
     fun getPokemonDetail(@Path("pokemon") pokemon: Int): Call<ResponsePokemonDetail>
 
+    @GET("pokemon/{pokemon}")
+    fun getPokemonDetailV2(@Path("pokemon") pokemon: Int): Call<List<ResponsePokemonDetailV2>>
+
+
     /**
      * Llamada con sealed class
      * */

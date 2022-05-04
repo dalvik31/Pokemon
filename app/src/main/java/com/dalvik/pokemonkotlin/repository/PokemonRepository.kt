@@ -4,13 +4,13 @@ import com.dalvik.pokemonkotlin.models.ResponseRegion
 import com.dalvik.pokemonkotlin.network.PokemonResult
 import com.dalvik.pokemonkotlin.network.RetrofitBuilder
 import com.google.gson.Gson
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.net.HttpURLConnection
 import java.net.URL
-import java.util.*
 
 class PokemonRepository {
     companion object {

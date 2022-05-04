@@ -2,6 +2,7 @@ package com.dalvik.pokemonkotlin.repository
 
 import android.util.Log
 import com.dalvik.pokemonkotlin.models.ResponsePokemonDetail
+import com.dalvik.pokemonkotlin.models.ResponsePokemonDetailV2
 import com.dalvik.pokemonkotlin.network.RetrofitBuilder
 import retrofit2.Call
 import retrofit2.Callback
@@ -21,18 +22,24 @@ class PokemonDetailRepository {
 
     fun getPokemonDetail(
         numberPokemon: Int,
-        onResult: (isSuccess: Boolean, response: ResponsePokemonDetail?) -> Unit
+        onResult: (isSuccess: Boolean, response: ResponsePokemonDetailV2?) -> Unit
     ) {
-        RetrofitBuilder.apiServiceDeatail.getPokemonDetail(numberPokemon).enqueue(object :
-            Callback<ResponsePokemonDetail> {
+        RetrofitBuilder.apiServiceDeatailV2.getPokemonDetailV2(numberPokemon).enqueue(object :
+            Callback<List<ResponsePokemonDetailV2>> {
             override fun onResponse(
-                call: Call<ResponsePokemonDetail>,
-                response: Response<ResponsePokemonDetail>
+                call: Call<List<ResponsePokemonDetailV2>>,
+                response: Response<List<ResponsePokemonDetailV2>>
             ) {
-                onResult(response.isSuccessful, response.body())
+                if( response.body()!=null){
+                    onResult(response.isSuccessful, response.body()!![0])
+                }else{
+                    onResult(false, null)
+                }
+
             }
 
-            override fun onFailure(call: Call<ResponsePokemonDetail>, t: Throwable) {
+            override fun onFailure(call: Call<List<ResponsePokemonDetailV2>>, t: Throwable) {
+                Log.e("error","error: ${t.message}")
                 onResult(false, null)
             }
 

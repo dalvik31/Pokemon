@@ -6,7 +6,9 @@ class Constants {
     companion object {
         //Service
         const val BASE_URL = "https://pokeapi.co/api/v2/";
+        @Deprecated("Page down")
         const val URL_POKEMON_DETAIL = "https://app.pokemon-api.xyz/"
+        const val URL_POKEMON_DETAIL_V2 = "https://pokeapi.glitch.me/v1/"
         val IMAGES_URL = arrayOf("https://www.cpokemon.com/pokes/home/","https://www.cpokemon.com/pokes/home/shiny/")
         const val URL_IMAGE_THUMBNAIL_POKEMON = "https://img.pokemondb.net/sprites/home/normal/"
         const val BASE_URL_LOGIN = "https://api.themoviedb.org/3/"

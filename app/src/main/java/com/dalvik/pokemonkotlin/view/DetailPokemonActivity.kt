@@ -3,6 +3,7 @@ package com.dalvik.pokemonkotlin.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.dalvik.pokemonkotlin.R
@@ -22,8 +23,11 @@ class DetailPokemonActivity : AppCompatActivity() {
     private fun downloadPokemonDetail() {
         val pokemonDetailViewModel = ViewModelProvider(this).get(PokemonDetailViewModel::class.java)
         pokemonDetailViewModel.getPokemonDetail(getPokemonNumberExtras()) { response ->
-            binding.shimmer.stopShimmerAnimation()
-            binding.shimmerFrameLayout.visibility = View.GONE
+            if (response == null) {
+                Toast.makeText(this,"No hay informacion de este pokemon", Toast.LENGTH_SHORT).show()
+                finish()
+                return@getPokemonDetail
+            }
             binding.contentInformation.visibility = View.VISIBLE
             binding.pokemon = response
             binding.sliderViewPager.offscreenPageLimit = 1
@@ -38,13 +42,4 @@ class DetailPokemonActivity : AppCompatActivity() {
         return 1
     }
 
-    override fun onResume() {
-        super.onResume()
-        binding.shimmer.startShimmerAnimation()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        binding.shimmer.stopShimmerAnimation()
-    }
 }
