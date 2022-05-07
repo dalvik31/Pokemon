@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PokemonKotlin</string>
+    <string name="app_name">Shiny Found</string>
 
     <string name="region_kanto">Kanto</string>
     <string name="region_johto">Johto</string>

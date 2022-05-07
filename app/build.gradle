@@ -33,6 +33,11 @@ android {
 
         }
         release {
+            /**
+             * Se crea la constante para que se cree  en tiempo de ejecucion en el archivo Build de debug
+             * */
+
+            buildConfigField "String", "API_KEY_TMBD", api_key_tmbd
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
