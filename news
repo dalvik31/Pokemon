@@ -9,7 +9,7 @@
       {
         "id": "1",
         "start_date": "1664577165000",
-        "start_date_string": "28 de septiembre de 2022",
+        "start_date_string":"28 de septiembre de 2022",
         "end_date": "1664577165000",
         "title": "¡Obtengan una visión cósmica con nuestro nuevo evento Estrellas de la Evolución!",
         "sub_title": "",
@@ -21,8 +21,9 @@
       {
         "id": "2",
         "start_date": "1664577165000",
-        "start_date_string": "20 de septiembre de 2022",
+            "start_date_string":"20 de septiembre de 2022",
         "end_date": "1664577165000",
+        
         "title": "¡Presume con Mareanie, Toxapex y los nuevos Pokémon disfrazados durante la Semana de la Moda!",
         "sub_title": "¡Se acerca el evento de estrellas de la Evolción!",
         "thumbnail": "https://lh3.googleusercontent.com/IzfjRjjW7xKrW6E9gudgRL9zPzGltIcgcvsorHaNE5soPPZOxHMv8QVozBnNDrAuK1KKqqGoNFilcL5ExmiSNxkwEkNildt5f-Or0gdnRjeFIy4=e365-w800",
@@ -33,7 +34,7 @@
       {
         "id": "3",
         "start_date": "1664577165000",
-        "start_date_string": "19 de septiembre de 2022",
+          "start_date_string":"19 de septiembre de 2022",
         "end_date": "1664577165000",
         "title": "Día de la Comunidad de octubre de 2022: Litwick",
         "sub_title": "¡Se acerca el evento de estrellas de la Evolción!",
@@ -45,7 +46,7 @@
       {
         "id": "4",
         "start_date": "1664577165000",
-        "start_date_string": "12 de septiembre de 2022",
+           "start_date_string":"12 de septiembre de 2022",
         "end_date": "1664577165000",
         "title": "¡Equípense para enfrentarse a Ultraentes de tipo Acero, Mega-Aggron y Togedemaru en el nuevo evento Prueba Tu Valía!",
         "sub_title": "¡Se acerca el evento de estrellas de la Evolción!",
@@ -57,7 +58,7 @@
       {
         "id": "5",
         "start_date": "1664577165000",
-        "start_date_string": "7 de septiembre de 2022",
+           "start_date_string":"7 de septiembre de 2022",
         "end_date": "1664577165000",
         "title": "Día de la Comunidad de septiembre de 2022: Roggenrola",
         "sub_title": "¡Se acerca el evento de estrellas de la Evolción!",
