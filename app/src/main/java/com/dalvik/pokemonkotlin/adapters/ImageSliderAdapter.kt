@@ -20,7 +20,9 @@ class ImageSliderAdapter(private val idPokemon: String): RecyclerView.Adapter<Im
     }
 
     override fun onBindViewHolder(holder: ImageSliderViewHolder, position: Int) {
-       holder.bindSliderImage(Constants.IMAGES_URL[position].plus(idPokemon).plus(".png"))
+       val url =  if(Constants.IMAGES_URL[position].contains(".png")) Constants.IMAGES_URL[position] else
+           Constants.IMAGES_URL[position].plus(idPokemon).plus(".png")
+       holder.bindSliderImage(url)
     }
 
     override fun getItemCount(): Int {

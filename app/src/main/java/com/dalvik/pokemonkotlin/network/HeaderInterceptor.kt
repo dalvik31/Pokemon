@@ -10,7 +10,7 @@ class HeaderInterceptor: Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val url = chain
             .request()
-            .url()
+            .url
             .newBuilder()
             .addQueryParameter(Constants.PARAMETER_API_KEY,BuildConfig.API_KEY_TMBD)
             .build()

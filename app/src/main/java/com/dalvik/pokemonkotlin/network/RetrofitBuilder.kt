@@ -1,9 +1,12 @@
 package com.dalvik.pokemonkotlin.network
 
 import com.dalvik.pokemonkotlin.utils.Constants
+import okhttp3.CacheControl
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
 
 object RetrofitBuilder {
 
@@ -22,9 +25,26 @@ object RetrofitBuilder {
     }
 
     private fun getRetrofitDetailV2(): Retrofit{
+       /* val logging = HttpLoggingInterceptor()
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY)
+        val httpClient = OkHttpClient.Builder()
+// add your other interceptors …
         return  Retrofit.Builder()
             .baseUrl(Constants.URL_POKEMON_DETAIL_V2)
             .addConverterFactory(GsonConverterFactory.create())
+            .client(httpClient.build())
+            .build()*/
+
+
+        val logging = HttpLoggingInterceptor()
+        logging.setLevel(HttpLoggingInterceptor.Level.BASIC)
+        val client = OkHttpClient.Builder()
+            .addInterceptor(logging)
+            .build()
+        return Retrofit.Builder()
+            .baseUrl(Constants.URL_POKEMON_DETAIL_V2)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client)
             .build()
     }
 
