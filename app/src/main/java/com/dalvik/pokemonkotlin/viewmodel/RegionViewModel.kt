@@ -48,6 +48,8 @@ class RegionViewModel : ViewModel() {
                     showLoading.postValue(false)
                     msgError.postValue(response.exception.message)
                 }
+
+                is PokemonResult.Loading -> {}
             }
 
         }
@@ -70,6 +72,8 @@ class RegionViewModel : ViewModel() {
                     showLoading.postValue(false)
                     msgError.postValue(result.exception.message)
                 }
+
+                is PokemonResult.Loading -> {}
             }
         }
     }

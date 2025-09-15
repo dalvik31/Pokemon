@@ -24,7 +24,7 @@ class PokemonDetailRepository {
         numberPokemon: Int,
         onResult: (isSuccess: Boolean, response: ResponsePokemonDetailV2?) -> Unit
     ) {
-        RetrofitBuilder.apiServiceDeatailV2.getPokemonDetailV2(numberPokemon).enqueue(object :
+        RetrofitBuilder.apiServiceDeatail.getPokemonDetailV2(numberPokemon).enqueue(object :
             Callback<List<ResponsePokemonDetailV2>> {
             override fun onResponse(
                 call: Call<List<ResponsePokemonDetailV2>>,
